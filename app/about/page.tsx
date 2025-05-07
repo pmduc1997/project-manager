@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+const AVATAR_SRC = "/avatar.jpg"; // Change this to your desired image path
+const ABOUT_TEXT = `I’m a Vietnamese Full-stack Developer with strong English skills, looking to collaborate with clients on outsourcing projects.`;
+
 export default function About() {
   return (
     <motion.section
@@ -13,20 +16,16 @@ export default function About() {
     >
       <div className="flex justify-center">
         <Image
-          src="/avatar.jpg" // Replace with your image path
-          alt="My Avatar"
-          width={120}
-          height={120}
-          className="rounded-full border-4 border-blue-500 shadow-md"
+          src={AVATAR_SRC}
+          alt="My Photo"
+          width={160}
+          height={160}
+          className="border border-gray-300 shadow-md object-cover"
         />
       </div>
       <div className="space-y-4">
         <h2 className="text-2xl font-bold">About Me</h2>
-        <p className="text-gray-700 max-w-xl mx-auto">
-          Hello! Im a passionate developer who enjoys building web applications
-          using modern technologies like Next.js, TailwindCSS, and TypeScript. I
-          love learning and creating clean, user-focused interfaces.
-        </p>
+        <p className="text-gray-700 max-w-xl mx-auto">{ABOUT_TEXT}</p>
       </div>
     </motion.section>
   );

@@ -1,20 +1,32 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Experience() {
   const experiences = [
     {
-      company: "Tech Co.",
-      role: "Frontend Developer",
-      duration: "2022 - Present",
+      company: "CMC Global",
+      logo: "/logos/cmc_global_company_limited_logo.jpeg",
+      role: "Senior Full-stack Developer",
+      duration: "March 2023 - Present",
       description:
-        "Built and maintained modern web apps using React and Next.js.",
+        "Lead development of modern web applications using Next.js, React, and Tailwind. Collaborated with product managers to deliver scalable frontend and backend features, improved performance, and maintained code quality through code reviews and testing.",
     },
     {
-      company: "Startup Inc.",
-      role: "Web Intern",
-      duration: "2021",
-      description: "Assisted in developing landing pages and fixing bugs.",
+      company: "VMO Holdings",
+      logo: "/logos/vmogroup_logo.jpeg",
+      role: "Full-stack Developer",
+      duration: "July 2021 - March 2023",
+      description:
+        "Built and maintained client-facing web applications using React, Node.js, and Firebase. Worked in agile teams, implemented REST APIs, and contributed to UI/UX improvements across multiple projects.",
+    },
+    {
+      company: "FPT Software",
+      logo: "/logos/fpt_software_logo.jpeg",
+      role: "Frontend Developer",
+      duration: "Jan 2020 - July 2021",
+      description:
+        "Developed interactive UI components using React and TypeScript for enterprise clients. Collaborated with backend teams to integrate APIs and delivered consistent, responsive designs with modern CSS frameworks.",
     },
   ];
 
@@ -23,20 +35,34 @@ export default function Experience() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="space-y-4"
+      className="space-y-6"
     >
       <h2 className="text-lg sm:text-xl font-bold">Experience</h2>
       <ul className="space-y-4">
         {experiences.map((exp) => (
           <li
             key={exp.company}
-            className="bg-white p-4 rounded shadow text-sm sm:text-base"
+            className="bg-white p-4 rounded-xl shadow hover:shadow-md transition text-sm sm:text-base flex items-start gap-4"
           >
-            <h3 className="font-semibold text-base sm:text-lg">
-              {exp.role} @ {exp.company}
-            </h3>
-            <p className="text-xs sm:text-sm text-gray-500">{exp.duration}</p>
-            <p>{exp.description}</p>
+            <div className="w-12 h-12 relative flex-shrink-0 border border-gray-200 rounded-lg overflow-hidden">
+              <Image
+                src={exp.logo}
+                alt={exp.company}
+                fill
+                className="object-contain p-1"
+              />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-semibold text-base sm:text-lg">
+                {exp.role}
+                <span className="text-gray-600 font-normal">
+                  {" "}
+                  @ {exp.company}
+                </span>
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-500">{exp.duration}</p>
+              <p className="mt-2 text-gray-700">{exp.description}</p>
+            </div>
           </li>
         ))}
       </ul>
