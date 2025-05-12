@@ -35,16 +35,18 @@ export default function Experience() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="space-y-6"
+      className="space-y-8 p-3"
     >
-      <h2 className="text-lg sm:text-xl font-bold">Experience</h2>
-      <ul className="space-y-4">
+      <h2 className="text-lg sm:text-xl font-bold text-center mb-2">
+        Experience
+      </h2>
+      <ul className="space-y-6 max-w-2xl w-full mx-auto">
         {experiences.map((exp) => (
           <li
             key={exp.company}
-            className="bg-white p-4 rounded-xl shadow hover:shadow-md transition text-sm sm:text-base flex items-start gap-4"
+            className="bg-white/90 backdrop-blur-md border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md transition text-sm sm:text-base flex items-start gap-4"
           >
-            <div className="w-12 h-12 relative flex-shrink-0 border border-gray-200 rounded-lg overflow-hidden">
+            <div className="w-12 h-12 relative flex-shrink-0 border border-gray-200 rounded-lg overflow-hidden bg-white">
               <Image
                 src={exp.logo}
                 alt={exp.company}

@@ -1,36 +1,45 @@
-"use client";
-import { Geist, Geist_Mono } from "next/font/google";
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
 import Header from "@/app/components/Header";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+export const metadata = {
+  title: "Phạm Minh Đức | Portfolio",
+  description: "Portfolio of Phạm Minh Đức - Vietnamese Full-stack Developer.",
+  keywords: [
+    "Phạm Minh Đức",
+    "Portfolio",
+    "Full-stack Developer",
+    "Vietnamese Developer",
+    "Web Developer",
+    "React",
+    "Next.js",
+    "Node.js",
+  ],
+  creator: "Phạm Minh Đức",
+  openGraph: {
+    title: "Phạm Minh Đức | Portfolio",
+    description:
+      "Portfolio of Phạm Minh Đức - Vietnamese Full-stack Developer.",
+    url: "https://your-portfolio-url.com",
+    siteName: "Phạm Minh Đức Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+};
 export default function PortfolioLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="min-h-screen bg-gray-100 text-gray-900">
+      <body className="antialiased">
+        <div
+          className="
+          min-h-screen text-gray-900
+          bg-[radial-gradient(circle,_#e0e7ef_1px,_#f8fafc_1.5px)]
+          bg-[size:18px_18px]
+          bg-gradient-to-br from-white via-[#f8fafc] to-[#e0f2fe]
+        "
+        >
           <Header />
-          <motion.main
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            className="max-w-4xl mx-auto px-4 py-10"
-          >
-            {children}
-          </motion.main>
+          {children}
         </div>
       </body>
     </html>
