@@ -62,7 +62,7 @@ export default function About() {
             <span role="img" aria-label="waving hand">
               👋
             </span>
-            Hi, I'm Đức from{" "}
+            Hi, I&apos;m Đức from{" "}
             <span className="font-semibold text-primary">Vietnam</span>
           </p>
           <p className="text-primary text-2xl sm:text-3xl font-extrabold font-montserrat tracking-wide drop-shadow-sm bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
