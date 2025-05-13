@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 const personalProjects = [
   {
-    name: "Wedding Invitation",
+    name: "Wedding Invitation (Beta)",
     url: "https://wedding-invitation-duc-trinh.vercel.app/",
     description:
-      "A modern wedding invitation site with motion and clean layout.",
+      "My wedding invitation site with motion and clean layout (Temporal images).",
     tech: ["Next.js", "TailwindCSS", "Framer Motion"],
   },
 ];
@@ -98,7 +98,7 @@ export default function Projects() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="space-y-8 min-h-screen py-4"
+      className="space-y-8 p-3"
     >
       <ProjectSection title="Company Projects" projects={companyProjects} />
       <ProjectSection title="Personal Projects" projects={personalProjects} />

@@ -60,7 +60,11 @@ export default function About() {
         </div>
         <div className="space-y-1 text-center">
           <p className="text-gray-700 text-base sm:text-lg italic flex items-center justify-center gap-2">
-            <span role="img" aria-label="waving hand">
+            <span
+              className="inline-block animate-wave origin-[70%_70%]"
+              role="img"
+              aria-label="waving hand"
+            >
               👋
             </span>
             Hi, I&apos;m Đức from{" "}

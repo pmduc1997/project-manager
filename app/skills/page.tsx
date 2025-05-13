@@ -26,7 +26,7 @@ const SKILLS: Skill[] = [
   },
   {
     name: "Next.js",
-    score: "8/10",
+    score: "9/10",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
@@ -34,10 +34,15 @@ const SKILLS: Skill[] = [
     score: "9/10",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
+  // {
+  //   name: "Node.js",
+  //   score: "7/10",
+  //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  // },
   {
-    name: "Node.js",
+    name: "AWS",
     score: "7/10",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
   },
 ];
 
@@ -45,7 +50,6 @@ function getScorePercent(score: string) {
   const [num, denom] = score.split("/").map(Number);
   return Math.round((num / denom) * 100);
 }
-
 export default function Skills() {
   return (
     <motion.section
@@ -55,7 +59,7 @@ export default function Skills() {
       className="space-y-6 p-3"
     >
       <h2 className="text-lg sm:text-xl font-bold text-center">Tech Skills</h2>
-      <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      <ul className="grid grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
         {SKILLS.map((skill) => (
           <li
             key={skill.name}
