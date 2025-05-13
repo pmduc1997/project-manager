@@ -3,12 +3,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
-const AVATAR_SRC = "/avatar.jpg";
+const AVATAR_SRC = "/avatar.jpeg";
 const SOCIALS = [
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/your-linkedin",
+    href: "https://www.linkedin.com/in/duc-pham-591850196/",
     icon: (
       <svg
         width="24"
@@ -23,7 +24,7 @@ const SOCIALS = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/your-github",
+    href: "https://github.com/pmduc1997",
     icon: (
       <svg
         width="24"
@@ -53,7 +54,7 @@ export default function About() {
             alt="My Photo"
             width={160}
             height={160}
-            className="rounded-full object-cover"
+            className="w-[160px] h-[160px] rounded-full object-cover object-top"
             priority
           />
         </div>
@@ -65,9 +66,22 @@ export default function About() {
             Hi, I&apos;m Đức from{" "}
             <span className="font-semibold text-primary">Vietnam</span>
           </p>
-          <p className="text-primary text-2xl sm:text-3xl font-extrabold font-montserrat tracking-wide drop-shadow-sm bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
-            Full-stack Developer
-          </p>
+          <TypeAnimation
+            sequence={[
+              "Full-stack Developer",
+              1500,
+              "React Enjoyer",
+              1500,
+              "UI/UX Aware Engineer",
+              1500,
+              "Code, Chill, Repeat",
+              1500,
+            ]}
+            wrapper="p"
+            speed={40}
+            className="text-primary text-2xl sm:text-3xl font-extrabold font-montserrat tracking-wide drop-shadow-sm bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent"
+            repeat={Infinity}
+          />
         </div>
         <div className="flex flex-col sm:flex-row gap-3 w-full max-w-xs justify-center pt-2">
           <a
@@ -79,7 +93,7 @@ export default function About() {
           </a>
           <a
             href="mailto:pmduc1997@gmail.com"
-            className="flex-1 px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary/10 hover:text-primary transition text-center font-semibold bg-white"
+            className="flex-1 px-4 py-2 border border-primary text-primary rounded-lg hover:bg-white/80 transition text-center font-semibold bg-white"
           >
             Contact Me
           </a>
