@@ -98,7 +98,7 @@ export default function Projects() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="space-y-8 min-h-screen pt-4"
+      className="space-y-8 min-h-screen py-4"
     >
       <ProjectSection title="Company Projects" projects={companyProjects} />
       <ProjectSection title="Personal Projects" projects={personalProjects} />
