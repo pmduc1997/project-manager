@@ -3,6 +3,13 @@ import { motion } from "framer-motion";
 
 const personalProjects = [
   {
+    name: "Internship Finder",
+    url: "https://internship-finder-ivory.vercel.app/",
+    description:
+      "My website to help students find internships in Vietnam. It has a clean UI and is easy to use.",
+    tech: ["Next.js", "TailwindCSS"],
+  },
+  {
     name: "Wedding Invitation (Beta)",
     url: "https://wedding-invitation-duc-trinh.vercel.app/",
     description:
