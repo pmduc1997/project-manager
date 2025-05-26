@@ -5,7 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
-const AVATAR_SRC = "/avatar.jpeg";
+const AVATAR_SRC = "/avatar.JPG";
 const SOCIALS = [
   {
     name: "LinkedIn",

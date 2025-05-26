@@ -1,13 +1,25 @@
 "use client";
 import { motion } from "framer-motion";
+import { ImageSlider } from "../components/ImageSlider";
 
-const personalProjects = [
+type Project = {
+  name: string;
+  url: string;
+  description: string;
+  tech: string[];
+  screenshots?: string[];
+  client?: string;
+  position?: string;
+};
+
+const personalProjects: Project[] = [
   {
     name: "Internship Finder",
     url: "https://internship-finder-ivory.vercel.app/",
     description:
       "My website to help students find internships in Vietnam. It has a clean UI and is easy to use.",
     tech: ["Next.js", "TailwindCSS"],
+    screenshots: ["/images/internship-1.png", "/images/internship-2.png"],
   },
   {
     name: "Wedding Invitation (Beta)",
@@ -15,17 +27,39 @@ const personalProjects = [
     description:
       "My wedding invitation site with motion and clean layout (Temporal images).",
     tech: ["Next.js", "TailwindCSS", "Framer Motion"],
+    screenshots: ["/images/internship-1.png", "/images/internship-2.png"],
   },
 ];
 
-const companyProjects = [
+const companyProjects: Project[] = [
   {
     name: "Chatbot AI",
     url: "https://guru.fwd.com/customer/?chatbot=sg-svc",
     description:
       "AI-powered chatbot using ChatGPT that assists users in purchasing insurance across WhatsApp, Facebook, and Instagram.",
     tech: ["NextJS", "TailwindCSS", "AWS", "NodeJS", "ChatGPT"],
+    screenshots: [
+      "/projects/fwd/screenshot-1.png",
+      "/projects/fwd/screenshot-2.png",
+      "/projects/fwd/screenshot-3.png",
+      "/projects/fwd/screenshot-4.png",
+    ],
     client: "FWD (Hong Kong)",
+    position: "Senior Full-stack Developer",
+  },
+  {
+    name: "Women's Clothing",
+    url: "https://www.lovebonito.com/sg",
+    description:
+      "Love, Bonito is Southeast Asia's largest vertically integrated, omni-channel womenswear brand.",
+    tech: ["NextJS", "TailwindCSS", "AWS", "NodeJS"],
+    screenshots: [
+      "/projects/bonito/screenshot-1.png",
+      "/projects/bonito/screenshot-2.png",
+      "/projects/bonito/screenshot-3.png",
+      "/projects/bonito/screenshot-4.png",
+    ],
+    client: "Love, Bonito (Singapore)",
     position: "Senior Full-stack Developer",
   },
   {
@@ -34,6 +68,12 @@ const companyProjects = [
     description:
       "An SSR-enabled e-commerce platform to sell official PETRONAS merchandise.",
     tech: ["NextJS", "TailwindCSS", "AWS", "NodeJS", "NestJS"],
+    screenshots: [
+      "/projects/petronas/screenshot-1.png",
+      "/projects/petronas/screenshot-2.png",
+      "/projects/petronas/screenshot-3.png",
+      "/projects/petronas/screenshot-4.png",
+    ],
     client: "Petronas (Malaysia)",
     position: "Team Lead Full-stack Developer",
   },
@@ -43,6 +83,10 @@ const companyProjects = [
     description:
       "Cross-platform app for sending physical documents online without visiting the post office.",
     tech: ["ReactJS", "React Native", "Bootstrap", "AWS", "NodeJS"],
+    screenshots: [
+      "/projects/mail/screenshot-1.png",
+      "/projects/mail/screenshot-2.png",
+    ],
     client: "Quadient (France)",
     position: "Full-stack Developer",
   },
@@ -74,6 +118,7 @@ function ProjectSection({
               <h4 className="text-base sm:text-lg font-semibold text-blue-700 hover:underline">
                 {proj.name}
               </h4>
+              {proj.screenshots && <ImageSlider images={proj.screenshots} />}
               <p className="text-sm text-gray-600">{proj.description}</p>
               {"client" in proj && (
                 <div className="text-sm text-gray-500 pt-1">
