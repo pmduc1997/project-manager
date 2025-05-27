@@ -19,7 +19,11 @@ const personalProjects: Project[] = [
     description:
       "My website to help students find internships in Vietnam. It has a clean UI and is easy to use.",
     tech: ["Next.js", "TailwindCSS"],
-    screenshots: ["/images/internship-1.png", "/images/internship-2.png"],
+    screenshots: [
+      "/projects/internship/screenshot-1.png",
+      "/projects/internship/screenshot-2.png",
+      "/projects/internship/screenshot-3.png",
+    ],
   },
   {
     name: "Wedding Invitation (Beta)",
@@ -27,7 +31,12 @@ const personalProjects: Project[] = [
     description:
       "My wedding invitation site with motion and clean layout (Temporal images).",
     tech: ["Next.js", "TailwindCSS", "Framer Motion"],
-    screenshots: ["/images/internship-1.png", "/images/internship-2.png"],
+    screenshots: [
+      "/projects/wedding/screenshot-1.png",
+      "/projects/wedding/screenshot-2.png",
+      "/projects/wedding/screenshot-3.png",
+      "/projects/wedding/screenshot-4.png",
+    ],
   },
 ];
 
