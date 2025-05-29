@@ -26,10 +26,9 @@ const personalProjects: Project[] = [
     ],
   },
   {
-    name: "Wedding Invitation (Beta)",
+    name: "Wedding Invitation",
     url: "https://wedding-invitation-duc-trinh.vercel.app/",
-    description:
-      "My wedding invitation site with motion and clean layout (Temporal images).",
+    description: "My wedding invitation site with motion and clean layout.",
     tech: ["Next.js", "TailwindCSS", "Framer Motion"],
     screenshots: [
       "/projects/wedding/screenshot-1.png",
